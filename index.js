@@ -14,9 +14,13 @@ function getUser() {
 
 }
  function render(e) {
-    let image = document.createElement('img');
-    image.setAttribute('src', e.picture.large);
-    user.appendChild(image);
+     user.innerHTML = '';
+     let image = document.createElement('img');
+     image.setAttribute('src', e.picture.large);
+     user.appendChild(image);
+     let name = document.createElement('p');
+     let userName = `${e.name.first[0].toUpperCase()}${e.name.first.slice(1)} ${e.name.last[0].toUpperCase()}${e.name.last.slice(1)}`
+     name.innerText = userName;
+     user.appendChild(name);
+    }
 
-
- }
